@@ -1,84 +1,32 @@
-const {
-  createDeck,
-  randomCard,
-  dealCards,
-  initialHandValue,
-  hitPlayer,
-  hitDealer,
-  decideWinner,
-  removeCards,
-  playGame,
-} = require("../blackjack");
-
-// "use strict";
-// jest.mock("../blackjack.js");
+const { createDeck, initialHandValue } = require("../utils");
 
 describe("blackjack tests", () => {
-  test("returns array of 52 cards", () => {
-    const actual = createDeck.deckArray;
-    const expected = 52;
-    expect(actual).toBe(expected);
+  test("Checks deckArray has a length of 52 elements", () => {
+    const deckArray = createDeck();
+    expect(deckArray).toHaveLength(52);
   });
-});
 
-test("return handArray of 2 cards", () => {
-  const result = initialHandValue(array);
-  expect(result.toHaveLength(2));
-});
+  test("When player has a king and a queen, their score is 20.", () => {
+    const handArray = ["K♠", "Q♥"];
+    const func = initialHandValue(handArray);
+    expect(func).toEqual(20);
+  });
 
-test("return array of all values and suits", () => {
-  expect(createDeck.deckArray).toEqual([
-    "A♠",
-    "A♥",
-    "A♣",
-    "A♦",
-    "2♠",
-    "2♥",
-    "2♣",
-    "2♦",
-    "3♠",
-    "3♥",
-    "3♣",
-    "3♦",
-    "4♠",
-    "4♥",
-    "4♣",
-    "4♦",
-    "5♠",
-    "5♥",
-    "5♣",
-    "5♦",
-    "6♠",
-    "6♥",
-    "6♣",
-    "6♦",
-    "7♠",
-    "7♥",
-    "7♣",
-    "7♦",
-    "8♠",
-    "8♥",
-    "8♣",
-    "8♦",
-    "9♠",
-    "9♥",
-    "9♣",
-    "9♦",
-    "10♠",
-    "10♥",
-    "10♣",
-    "10♦",
-    "J♠",
-    "J♥",
-    "J♣",
-    "J♦",
-    "Q♠",
-    "Q♥",
-    "Q♣",
-    "Q♦",
-    "K♠",
-    "K♥",
-    "K♣",
-    "K♦",
-  ]);
+  test("When player has a king and an ace, their score is 21.", () => {
+    const handArray = ["K♠", "A♠"];
+    const func = initialHandValue(handArray);
+    expect(func).toEqual(21);
+  });
+
+  test("When player has a king, queen and an ace, their score is 21.", () => {
+    const handArray = ["K♠", "Q♥", "A♠"];
+    const func = initialHandValue(handArray);
+    expect(func).toEqual(21);
+  });
+
+  test("When player has a nine, an ace, and another ace, their score is 21.", () => {
+    const handArray = ["9♠", "A♥", "A♠"];
+    const func = initialHandValue(handArray);
+    expect(func).toEqual(21);
+  });
 });

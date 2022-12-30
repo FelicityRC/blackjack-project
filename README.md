@@ -27,8 +27,16 @@
 
 ---
 
-### _To Run Tests_
+### _Install the Following To Run Tests_
 
 - npm i jest -D
+
+- npm i --save-dev @testing-library/jest-dom
+
+- npm i jquery-jsdom
+
+- npm i jest-dom
+
+- npm i -D jest-environment-jsdom
 
 - npm t blackjack.test.js

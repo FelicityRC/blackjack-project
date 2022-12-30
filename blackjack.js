@@ -1,26 +1,3 @@
-// BLACKJACK GAME - BBC TECH ASSESSMENT
-
-/*
-- create deck of 52 cards
-- allocate hand of cards to dealer and player
-- select a random card
-- give option to hit or stand
-- if hit then add card
-- if stand then let dealer play
-- determine a winner
-- deal next hand
-
-1 - createDeck fills deckArray from values & suits array
-2 - randomCard creates new random cards when newCard() called
-3 - dealCards deals 2 cards each to played and dealer
-4 - initialHandValue calculates sum for each first 2 cards - will iterate over each card in array hand that's passed in & value evaluated to determine score/how to play on - when function called
-5 - hitPlayer gives player new card when hit button pressed (addEventListener for hitPlayer function)
-6 - hitDealer func called when stand button is clicked - evaluates and adds a card accordingly
-7 - decideWinner is called if alert hasn't already given msg such as gone bust or have 21.
-8 - removeCards - removes however many cards from both hands
-9 - playGame - restarts game by invoking removeCards() and dealCards().
-*/
-
 const values = [
   "A",
   "2",
@@ -63,9 +40,10 @@ const createDeck = () => {
 
 const randomCard = () => {
   const randomIndexNum = Math.floor(Math.random() * deckArray.length);
-  const randomCard = deckArray[randomIndexNum];
+  const cardToRemove = deckArray[randomIndexNum];
+  console.log(cardToRemove);
   deckArray.splice(randomIndexNum, 1);
-  return randomCard;
+  return cardToRemove;
 };
 
 const dealCards = () => {
@@ -168,17 +146,35 @@ nextHand.addEventListener("click", playGame);
 createDeck();
 playGame();
 
-// module.exports = {
-//   createDeck,
-//   randomCard,
-//   dealCards,
-//   initialHandValue,
-//   hitPlayer,
-//   hitDealer,
-//   decideWinner,
-//   removeCards,
-//   playGame,
-// };
+/*
+
+My Notes:
+- create deck of 52 cards
+- allocate hand of 2 cards each to dealer and player
+- options to hit or stand
+- if hit then add new random card
+- if stand then let dealer play on
+- determine a winner
+- deal next hand
+
+1 - createDeck fills deckArray from value & suit arrays (nested forEach to iterate over and push into new deckArray).
+
+2 - randomCard creates new random cards when newCard() invoked. randomIndexNum holds value of random and rounded down num between 1 - 52 (array's index: 0 - 51). Removes random cards that've been used in hands by splicing(from, howMany) accessed by bracket notation: deckArray[indexOfEl].
+
+3 - dealCards deals 2 cards each to played and dealer by using cardModel to create new elements on page.
+
+4 - initialHandValue calculates sum for each hand - iterates over each card in array that's passed in & value evaluated and returned - based on length of string & number on card (ignores the suit).
+
+5 - hitPlayer gives player new card when hit "clicked" - addEventListener with hitPlayer as second argument & hit variable to hold value of element on html doc. handValue holds initialHandValue func(withNewCardPassedIn) and uses cardModel (createElement) to add new card to screen (player element) which displays hand. Can't play on if bust.
+
+6 - hitDealer func called when stand button is clicked - pauses execution of code e.g incase already bust. Adds a card accordingly and calls initialHandValue func to evalute score. Bust or win handled here for immediate result.
+
+7 - decideWinner is called if alert hasn't already given msg such as gone bust or have 21 and utilizes async/await for promise fulfilment.
+
+8 - removeCards - while loop executed when func called to remove all cards (children elements) from dealer's and player's hands.
+
+9 - playGame - restarts game by invoking removeCards() and dealCards().
+*/
 
 /*
   Notes:

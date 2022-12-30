@@ -1,0 +1,31 @@
+{
+  "name": "blackjack-project",
+  "version": "1.0.0",
+  "description": "## _Scenarios_",
+  "main": "blackjack.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelicityRC/blackjack-project.git"
+  },
+  "keywords": [],
+  "author": "felicityC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelicityRC/blackjack-project/issues"
+  },
+  "homepage": "https://github.com/FelicityRC/blackjack-project#readme",
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jquery": "^3.6.3"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

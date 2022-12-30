@@ -37,6 +37,10 @@ button {
   background-color: whitesmoke;
 }
 
+button:hover {
+  background-color: cadetblue;
+}
+
 .container {
   width: fit-content;
 }
@@ -66,6 +70,21 @@ button {
   border-radius: 10px;
   font-size: 50px;
   text-align: center;
+  animation: 10s infinite;
+  animation-name: cards;
+  animation-timing-function: linear;
+}
+
+@keyframes cards {
+  10% {
+    background-color: wheat;
+  }
+  40% {
+    background-color: teal;
+  }
+  80% {
+    background-color: lightblue;
+  }
 }
 
 #next-hand {

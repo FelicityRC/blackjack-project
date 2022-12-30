@@ -86,16 +86,19 @@ const dealCards = () => {
 
 const initialHandValue = (handArray) => {
   let value = 0;
-  let hasAce = false;
+  let hasAce = 0;
   handArray.forEach((card) => {
     let cardValue =
       card.length === 2 ? card.substring(0, 1) : card.substring(0, 2);
-    if (cardValue === "A") hasAce = true;
+    if (cardValue === "A") hasAce += 1;
     else if (cardValue === "J" || cardValue === "Q" || cardValue === "K")
       value += 10;
     else value += Number(cardValue);
   });
-  if (hasAce) value + 11 > 21 ? (value += 1) : (value += 11);
+  if (hasAce > 0) value + 11 > 21 ? (value += 1) : (value += 11);
+  if (hasAce > 1) {
+    value += hasAce - 1;
+  }
   return value;
 };
 

@@ -15,7 +15,7 @@ const values = [
 ];
 const suits = ["♠", "♥", "♣", "♦"];
 
-let deckArray = [];
+const deckArray = [];
 
 const createDeck = () => {
   values.forEach((value) => {
@@ -45,4 +45,7 @@ const initialHandValue = (handArray) => {
   return value;
 };
 
-module.exports = { createDeck, initialHandValue };
+module.exports = {
+  createDeck,
+  initialHandValue
+};

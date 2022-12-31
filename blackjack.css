@@ -9,20 +9,19 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 100;
-  letter-spacing: 25px;
+  letter-spacing: 30px;
   text-shadow: 0.5px 0.5px #ff0000;
   margin: auto;
-  padding-top: 10px;
 }
 
 h2 {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin: 5px;
-  padding-top: 20px;
+  margin: 0px;
+  padding-top: 10px;
 }
 
 button {
@@ -42,14 +41,37 @@ button:hover {
   background-color: cadetblue;
 }
 
-.container {
-  width: fit-content;
+p {
+  padding: 0px;
+  margin: 0px;
+  font-style: italic;
 }
 
-.button-container {
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.container {
+  display: flex;
+}
+
+.emoji {
+  font-size: 2.5em;
+  height: 10px;
+  border-radius: 5px;
+  margin: 15px;
+  animation: rotate 3s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-5deg);
+  }
+  55% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
 
 .layout {
@@ -59,11 +81,12 @@ button:hover {
 
 .cards {
   display: flex;
+  justify-content: center;
   gap: 15px;
 }
 
 .card {
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   background-color: whitesmoke;
   height: 140px;
@@ -71,6 +94,25 @@ button:hover {
   border-radius: 10px;
   margin: 2px;
   padding-top: 40px;
+}
+
+.playerHeader {
+  padding-top: 20px;
+}
+
+.button-container {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.scoreText {
+  color: darkslategrey;
+  justify-content: center;
+  font-size: 22px;
+  letter-spacing: 3px;
+  padding-top: 8px;
+  padding-bottom: 15px;
 }
 
 #next-hand {

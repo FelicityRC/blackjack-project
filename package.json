@@ -4,7 +4,7 @@
   "description": "## _Scenarios_",
   "main": "blackjack.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/FelicityRC/blackjack-project#readme",
   "devDependencies": {
+    "@testing-library/dom": "^8.19.1",
     "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1"
+    "jest-environment-jsdom": "^29.3.1",
+    "webpack": "^5.75.0"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "jquery": "^3.6.3"
+    "jquery": "^3.6.3",
+    "jquery-jsdom": "^1.0.0"
   },
   "jest": {
     "testEnvironment": "jsdom"

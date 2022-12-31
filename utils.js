@@ -38,14 +38,14 @@ const initialHandValue = (handArray) => {
       value += 10;
     else value += Number(cardValue);
   });
-  if (hasAce > 0) value + 11 > 21 ? (value += 1) : (value += 11);
-  if (hasAce > 1) {
+  if (hasAce > 0) {
     value += hasAce - 1;
+    value + 11 > 21 ? (value += 1) : (value += 11);
   }
   return value;
 };
 
 module.exports = {
   createDeck,
-  initialHandValue
+  initialHandValue,
 };

@@ -1,27 +1,28 @@
 body {
-  background-color: lightgrey;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: lightgrey;
   text-align: center;
+  height: auto;
   border: 10px solid black;
   margin: auto;
-  height: auto;
 }
 
 h1 {
-  letter-spacing: 25px;
   font-size: 3rem;
   font-weight: 100;
+  letter-spacing: 25px;
   text-shadow: 0.5px 0.5px #ff0000;
   margin: auto;
+  padding-top: 10px;
 }
 
 h2 {
-  margin: 5px;
-  padding-top: 20px;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin: 5px;
+  padding-top: 20px;
 }
 
 button {
@@ -29,12 +30,12 @@ button {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   letter-spacing: 5px;
-  padding: 10px;
-  margin: auto;
+  background-color: whitesmoke;
   border: none;
   border-radius: 10px;
+  padding: 10px;
+  margin: auto;
   cursor: pointer;
-  background-color: whitesmoke;
 }
 
 button:hover {
@@ -52,8 +53,8 @@ button:hover {
 }
 
 .layout {
-  margin: auto;
   width: fit-content;
+  margin: auto;
 }
 
 .cards {
@@ -62,29 +63,14 @@ button:hover {
 }
 
 .card {
-  background-color: whitesmoke;
-  margin: 2px;
-  height: 140px;
-  width: 140px;
-  padding-top: 40px;
-  border-radius: 10px;
   font-size: 50px;
   text-align: center;
-  animation: 10s infinite;
-  animation-name: cards;
-  animation-timing-function: linear;
-}
-
-@keyframes cards {
-  10% {
-    background-color: wheat;
-  }
-  40% {
-    background-color: teal;
-  }
-  80% {
-    background-color: lightblue;
-  }
+  background-color: whitesmoke;
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+  margin: 2px;
+  padding-top: 40px;
 }
 
 #next-hand {

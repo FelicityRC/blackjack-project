@@ -8,7 +8,6 @@ The player is initially dealt two cards. They may to choose to 'hit' (draw a car
 
 A full description of the game can be found _[here.](https://en.wikipedia.org/wiki/Blackjack)_
 
-
 ## _Scenarios_
 
 - When dealt opening hand, player has 2 cards.
@@ -19,7 +18,6 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 - When player has a **_king_** and an **_ace_**, their score is 21.
 - When player has a **_king_**, **_queen_** and an **_ace_**, their score is 21.
 - When player has a **_nine_**, an **_ace_** and another **_ace_**, their score is 21.
-
 
 ## _To Run Locally_
 
@@ -44,5 +42,4 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 
 I chose to create this game without a framework and thoroughly enjoyed utilizing my DOM manipulation skills with Vanilla JS, HTML, CSS and Jest. Please see game-images folder for UI examples and NOTES.md file for further breakdown of planning, thoughts and predictions.
 
- 
-![Blackjack](../blackjack-project/game-images/winning-hand-example.png)
+![Blackjack](https://github.com/FelicityRC/blackjack-project/tree/main/game-images/winning-hand-example.png)

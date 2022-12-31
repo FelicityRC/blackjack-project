@@ -4,7 +4,7 @@
 
 Write code that simulates a hand of blackjack cards. The goal of the game is to get a hand that's worth as close to 21 points as possible. If the player's hand goes over 21 points then they have lost.
 
-The player is initially dealt two cards. They may to choose to 'hit' (draw a card) or 'stand' (stop drawing cards). If they 'hit' then the new card's value is added to the initial hand of cards. If the total exceeds 21 then the player has 'bust' and loses.
+The player is initially dealt two cards. They may to choose to 'hit' (draw a card) or 'stand' (stop drawing cards). If they 'hit' then the new card's value is added to the initial hand of cards. If the total hand exceeds 21 then the player has 'bust' and loses.
 
 A full description of the game can be found _[here.](https://en.wikipedia.org/wiki/Blackjack)_
 
@@ -40,6 +40,6 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 - [x] Link relevant file sources to HTML skeleton.
 - [x] Summarise necessary functionality for basic game play.
 
-\
+
 
 I chose to create this game without a framework and thoroughly enjoyed utilizing my DOM manipulation skills with Vanilla JS, HTML, CSS and Jest. Please see game-images folder for UI examples and NOTES.md file for further breakdown of planning, thoughts and predictions.

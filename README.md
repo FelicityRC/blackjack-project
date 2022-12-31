@@ -38,8 +38,8 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 - [x] Initialise with a README.md, package.json and .gitignore file.
 - [x] Plan layout and styling for user interface.
 - [x] Link relevant file sources to HTML skeleton.
-- [x] Summarise necessary functionality for basic game play.
+- [x] Summarise necessary functionality for game play.
 
-
+---
 
 I chose to create this game without a framework and thoroughly enjoyed utilizing my DOM manipulation skills with Vanilla JS, HTML, CSS and Jest. Please see game-images folder for UI examples and NOTES.md file for further breakdown of planning, thoughts and predictions.

@@ -21,13 +21,13 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 
 ## _To Run Locally_
 
-- fork then clone this repository
+- Fork then clone this repository.
 
-- run npm i
+- `run npm i`
 
-- locate HTML file to open in local browser
+- `run npm t`
 
-- run npm t
+- Locate HTML file to open in local browser.
 
 ## _Initial Steps Taken_
 

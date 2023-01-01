@@ -54,7 +54,7 @@ Game Creation:
 
 7. displayResults()
 
-   - I added this function towards the end as I originally displayed the score using the alert() method. I decided that from a user's perspective, it wasn't as efficient or convenient as a message popping up to inform you and then automatically disappearing when you click on _deal next hand_.
+   - I added this function towards the end as I originally displayed the score using the alert() method. I decided that from a user's perspective, it wasn't as efficient or convenient as a msg popping up to inform you and then automatically disappearing when you click on _deal next hand_.
 
 8. decideWinner()
 
@@ -62,7 +62,7 @@ Game Creation:
 
 9. removeCards()
 
-   - While loop executed when this function is called to remove the results message by setting the string to "" and remove all children elements (cards) from both hands.
+   - While loop executed when this function is called to remove the results msg by setting the string to "" and remove all children elements (cards) from both hands.
 
 10. playGame()
 

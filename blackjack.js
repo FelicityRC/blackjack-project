@@ -65,14 +65,17 @@ const dealCards = () => {
 const initialHandValue = (handArray) => {
   let value = 0;
   let hasAce = 0;
+
   handArray.forEach((card) => {
     let cardValue =
       card.length === 2 ? card.substring(0, 1) : card.substring(0, 2);
+
     if (cardValue === "A") hasAce += 1;
     else if (cardValue === "J" || cardValue === "Q" || cardValue === "K")
       value += 10;
     else value += Number(cardValue);
   });
+
   if (hasAce > 0) {
     value += hasAce - 1;
     value + 11 > 21 ? (value += 1) : (value += 11);
@@ -95,13 +98,13 @@ const hitPlayer = () => {
   }
 };
 
-const hitDealer = async () => {
+const hitDealer = () => {
   stand.setAttribute("disabled", true);
   hit.setAttribute("disabled", true);
   nextHand.removeAttribute("disabled");
-  const card = await randomCard();
+  const card = randomCard();
   dealerHandArray.push(card);
-  const handValue = await initialHandValue(dealerHandArray);
+  const handValue = initialHandValue(dealerHandArray);
   const addCard = displayCards.cloneNode(true);
   addCard.innerHTML = card;
   dealer.append(addCard);

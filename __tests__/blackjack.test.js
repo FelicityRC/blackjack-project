@@ -3,19 +3,23 @@ const INITIAL_HTML = `<main class="layout">
 <section>
   <div class="cards" id="dealer"></div>
 </section>
-<h2 class="playerHeader">Player's Cards:</h2>
+
+<h2 class="player-header">Player's Cards:</h2>
 <section>
   <div class="cards" id="player"></div>
 </section>
+
 <section>
   <div class="button-container" id="buttons">
     <button id="hit">Hit</button>
     <button id="stand">Stand</button>
   </div>
 </section>
-<div class="scoreBox" id="results">
+
+<div class="score-text" id="results">
   <p></p>
 </div>
+
 <div>
   <button id="next-hand">Deal Next Hand</button>
 </div>
@@ -29,6 +33,9 @@ document.body.innerHTML = INITIAL_HTML;
 const { randomCard, initialHandValue } = require("../blackjack");
 describe("Blackjack Tests", () => {
   describe("Unit Tests", () => {
+    beforeEach(() => {
+      document.body.innerHTML = INITIAL_HTML;
+    });
     test("When player has a king and a queen, their score is 20.", () => {
       const handArray = ["K♠", "Q♥"];
       const result = initialHandValue(handArray);
@@ -69,28 +76,6 @@ describe("Blackjack Tests", () => {
       expect(dealCards).toHaveLength(2);
     });
 
-    test("When player clicks 'hit', they receive another card", () => {
-      const hitClick = document.querySelector("#hit");
-      const initialArray = playerHandArray.length;
-      hitClick.addEventListener = jest.fn();
-      hitClick.addEventListener.mockImplementation((event, handler) => {
-        handler();
-        hitClick.click();
-        expect(initialArray).toHaveLength(3);
-      });
-    });
-
-    test("When player clicks 'stand', they receive no further cards (score is evaluated against dealer's)", () => {
-      const standClick = document.querySelector("#stand");
-      const playerHand = playerHandArray.length;
-      standClick.addEventListener = jest.fn();
-      standClick.addEventListener.mockImplementation((event, handler) => {
-        handler();
-        standClick.click();
-        expect(playerHand).toHaveLength(2);
-      });
-    });
-
     test("When player's hand is 21 or less, it is 'valid'", () => {
       const mockHand = ["3♣", "8♦"];
       const mockCard = "Q♥";
@@ -111,6 +96,29 @@ describe("Blackjack Tests", () => {
       if (sum > 21) checkBust = true;
       expect(checkBust).toBe(true);
       expect(checkBust).not.toBe(false);
+    });
+  });
+
+  // Come back to these last two tests - take another look at the assertions
+  test("When player clicks 'hit', they receive another card", () => {
+    const hitClick = document.querySelector("#hit");
+    const initialArray = playerHandArray.length;
+    hitClick.addEventListener = jest.fn();
+    hitClick.addEventListener.mockImplementation((event, handler) => {
+      handler();
+      hitClick.click();
+      expect(initialArray).toHaveLength(3);
+    });
+  });
+
+  test("When player clicks 'stand', they receive no further cards (score is evaluated against dealer's)", () => {
+    const standClick = document.querySelector("#stand");
+    const playerHand = playerHandArray.length;
+    standClick.addEventListener = jest.fn();
+    standClick.addEventListener.mockImplementation((event, handler) => {
+      handler();
+      standClick.click();
+      expect(playerHand).toHaveLength(2);
     });
   });
 });

@@ -1,5 +1,6 @@
 body {
-  margin: auto;
+  display: flex;
+  margin: 0;
   background-color: lavenderblush;
   border: solid 15px lightgray;
 }

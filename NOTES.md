@@ -70,9 +70,9 @@ Game Creation:
 
 ## Further Thoughts
 
-- When testing the game afterwards in my local browser, _after_ clicking _stand_, and receiving the determined score displayed, it was _still_ possible to continue clicking _hit_ and _stand_ which caused more cards to be display, altering the result of that original hand which made for a bad user experience.
+- When testing the game afterwards in my local browser, _after_ clicking _stand_, and receiving the determined score displayed, it was _still_ possible to continue clicking _hit_ and _stand_ which caused more cards to be displayed, altering the result of the original hand which made for a bad user experience.
 
-- To solve this, I added _element_.setAttribute("disabled", true) and _element_.removeAttribute("disabled") in all required places in my code, so that now once _stand_ has been clicked on **_or_** the dealer has won, the player only has the option to view the results and deal the next hand which is what the user would expect. This avoids any confusion for the user if they accidently click on available buttons that alter the traditional game.
+- To solve this, I added _element_.setAttribute("disabled", true) and _element_.removeAttribute("disabled") to the required places in my code, so that now, once _stand_ has been clicked on **_or_** the dealer has won, the player only has the option to view the results and deal the next hand which is what would be expected. This avoids any confusion for the user e.g if they accidently clicked on available buttons that altered the traditional game.
 
 ## Learning Opportunities
 

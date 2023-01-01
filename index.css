@@ -1,11 +1,11 @@
 body {
-  display: flex;
-  margin: 0;
+  margin: auto;
   background-color: lavenderblush;
   border: solid 15px lightgray;
 }
 
 main {
+  margin: 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

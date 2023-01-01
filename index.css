@@ -1,0 +1,49 @@
+body {
+  margin: auto;
+  background-color: lavenderblush;
+  border: solid 15px lightgray;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+img {
+  width: 680px;
+  height: 320px;
+  margin-top: 30px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  margin: 0px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 30px;
+  text-align: center;
+  margin: 0px;
+  margin: 20px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 10px;
+  text-align: center;
+  margin: 0px;
+}

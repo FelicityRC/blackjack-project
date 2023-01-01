@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/FelicityRC/blackjack-project#readme",
   "devDependencies": {
-    "jest": "^29.3.1"
+    "jest": "^29.3.1",
+    "jquery": "^3.6.3",
+    "jquery-jsdom": "^1.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }

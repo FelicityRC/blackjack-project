@@ -76,6 +76,6 @@ Game Creation:
 
 ## Learning Opportunities
 
-1. When running my initial tests, I received an error of 'document wasn't defined' with a suggestion of using the jsdom test environment so I installed jsdom & jquery dependencies. My next error was a TypeError that couldn't read my event listeners.
+- When running my initial tests, I received an error of 'document wasn't defined' with a suggestion of using the jsdom test environment so I installed jsdom & jquery dependencies. My next error was a TypeError that couldn't read my event listeners. After reading documentation, I learned that I needed to give Jest a way of mocking the DOM - so I placed the contents of < main > < main /> from my HTML file, prior to the tests in blackjack.test.js file so the code could read the DOM structure before executing, which prevented the errors and so I was able to continue with some further testing.
 
-2. After reading some documentation, I learned that I needed to give Jest a way of mocking the DOM - so I placed the contents of < main > < main /> from my HTML file, prior to the tests in blackjack.test.js file so the code could read the DOM structure before executing, which prevented the errors and so I was able to continue with some further testing.
+- I have taken away many notes from attempting this task as to how it could be created in alternative ways and developed further with added functionality and more features. I'm grateful for the opportunity and thoroughly enjoyed it.

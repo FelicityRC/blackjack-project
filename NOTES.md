@@ -38,7 +38,7 @@ Game Creation:
 
 4. initialHandValue()
 
-   - Calculates sum for each hand array passed in. I altered this after writing unit tests as I originally set _let hasAce = false_ rather than _let hasAce = 0_. I changed it because of the instance of a hand containing more than one ace, I needed to account for only one point to be added for each additional ace added to a hand _after_ the first (which has the logic to check whether adding 11 to the hand would make the hand go bust or not).
+   - Calculates sum for each hand array passed in. I altered this after writing unit tests as I originally set _let hasAce = false_ rather than _let hasAce = 0_. I changed it because of the instance of a hand potentially containing more than one ace. I needed to account for only one point to be added, for each additional ace added to a hand _after_ the first ace (which has the logic to check whether adding 11 to the hand would make the hand go bust or not).
 
    - I checked the length of the cards, as _10_ needed to be considered with it being longer in length than all the other values. The suits are ignored as they don't alter the outcome.
 

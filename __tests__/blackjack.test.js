@@ -27,7 +27,7 @@ const INITIAL_HTML = `<main class="layout">
 
 // The HTML above is set for any tests that affect the DOM that need to be reset.
 // The below line of code resets the HTML back to initial state.
-// beforeEach(()=>{}) placed before each integration test below so when run, below line of code is executed.
+// beforeEach(()=>{}) placed before each test below so when run, the below line of code is executed.
 document.body.innerHTML = INITIAL_HTML;
 
 const { randomCard, initialHandValue } = require("../blackjack");

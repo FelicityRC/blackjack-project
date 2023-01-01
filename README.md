@@ -39,7 +39,7 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 - [x] Summarise necessary functionality for game play.
 
 
-### Link to my Blackjack GitHub Pages _[Here](https://felicityrc.github.io/blackjack-project/)_
+### Link to my Blackjack GitHub Pages _[here](https://felicityrc.github.io/blackjack-project/)_
 
 ---
 I chose to create this game without a framework and thoroughly enjoyed utilising my DOM manipulation skills with Vanilla JS, HTML, CSS and Jest. Please see NOTES.md file for breakdown of planning, thoughts and predictions.

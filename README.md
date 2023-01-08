@@ -40,6 +40,6 @@ A full description of the game can be found _[here.](https://en.wikipedia.org/wi
 
 ---
 
-I chose to create this game without a framework and thoroughly enjoyed utilizing my DOM manipulation skills with Vanilla JS, HTML, CSS and Jest. Please see game-images folder for UI examples and NOTES.md file for further breakdown of planning, thoughts and predictions.
+I chose to create this game without a framework and thoroughly enjoyed utilizing my DOM manipulation skills with Vanilla JS, HTML, CSS and Jest. Please see NOTES.md file for breakdown of planning, thoughts and predictions.
 
-![Blackjack](https://github.com/FelicityRC/blackjack-project/tree/main/game-images/winning-hand-example.png)
+![blackjack-project-winning-hand-example](https://user-images.githubusercontent.com/108304095/211205839-fde5d09f-ea8a-4604-9454-6c750ac98cd3.png)
